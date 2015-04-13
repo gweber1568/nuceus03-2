@@ -8,7 +8,7 @@
     <description></description>
     <display-name>ControleurNuceus</display-name>
     <servlet-name>ControleurNuceus</servlet-name>
-    <servlet-class>fr.noixcoop.nuceus.ControleurNuceus</servlet-class>
+    <servlet-class>fr.noixcoop.nuceus.presentation.ControleurNuceus</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ControleurNuceus</servlet-name>

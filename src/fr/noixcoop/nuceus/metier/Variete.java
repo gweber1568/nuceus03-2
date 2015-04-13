@@ -1,4 +1,4 @@
-package fr.noixcoop.nuceus;
+package fr.noixcoop.nuceus.metier;
 
 public class Variete {
 	private String libelle ;

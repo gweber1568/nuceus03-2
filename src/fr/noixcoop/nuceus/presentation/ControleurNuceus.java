@@ -1,11 +1,15 @@
-package fr.noixcoop.nuceus;
+package fr.noixcoop.nuceus.presentation;
 
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import fr.noixcoop.nuceus.metier.Variete;
+import fr.noixcoop.nuceus.logiqueMetier.MetierVarietes;
 
 /**
  * Servlet implementation class ControleurNuceus
@@ -66,7 +70,7 @@ public class ControleurNuceus extends HttpServlet {
 		}
     	else if(action.equals("/supprimer")){
 			 String libelle = request.getParameter("libelle") ;
-			 boolean ok = metierVarietes.supprimerVariete(libelle) ;
+			 boolean ok = metierVarietes.supprimer(libelle) ;
 			 if(ok){
 				 request.setAttribute("varietes",metierVarietes.consulter()) ;
 				 getServletContext().getRequestDispatcher("/WEB-INF/vues/vueListe.jsp").forward(request,response) ;
